@@ -1,6 +1,9 @@
+
+
 header{
     /* height: 50vh; */
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-color: white;
 }
 
 #heading{
@@ -16,13 +19,14 @@ ul{
     justify-content: space-between;
 }
 
-#Login{
+/* #Login{
+    background-color: white;
     background-color: white;
     cursor: pointer;
     border-radius: 25%;
     padding: 7px;
     border-style: none;
-}
+} */
 
 #logo{
 width: 50px;
@@ -30,8 +34,9 @@ height: 50px;
 }
 
 #hero{
-    background-color: aqua;
+    /* background-color: aqua; */
     /* height: 70vh; */
+    background-color: white;
     
 }
 
@@ -40,5 +45,9 @@ height: 50px;
     border-radius: 10%;
     height: 70vh;
     width: 100vh;
+    
+}
+
+#registration{
     
 }

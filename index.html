@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/hotel.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="font-sans"> 
     <header class="flex items-center justify-between p-10">
         <div class="flex items-center space-x-2">
             <img src="images/hotel.png" id="logo" alt="" class="h-8 w-8">
@@ -16,22 +16,166 @@
         </div>
         <nav>
             <ul class="flex space-x-8 items-center">
-                <li><a href="#">Home</a></li>
-                <li><a href="#booking">Booking</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#registration">Booking</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="login.html"><button id="Login" class="shadow-md text-center" onclick="">Login</button></a></li>
+                <!-- <li><a href="login.html"></a></li> -->
                 <!-- <li><button id="Login" class="shadow-md text-center" onclick="">Login</button></li> -->
+                <button id="Login" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600" onclick=""> Login</button>
+            
             </ul>
         </nav>
     </header>
 
+    <hr>
     <div class="items-center flex" id="hero">
         <img src="images/image1.jpg" alt="" id="hero-img" class="items-center ">
         <div>
         <h1 class="text-4xl md:text-7xl font-bold mb-4">Enjoy the best Stay Here!</h1>
-        <p class="text-gray-600">Discover luxurious accommodations with exceptional service and amenities. Make your stay unforgettable with StayFord!</p>
+        <p class="text-gray-600 text-lg">Discover luxurious accommodations with exceptional service and amenities. Make your stay unforgettable with StayFord!</p>
         </div>
     </div>
+
+    <div id="registration" class="max-w-3xl mx-auto p-8 border rounded-lg shadow-lg bg-white">
+        <form action="">
+            <!-- Title -->
+            <h1 class="text-lg md:text-3xl font-bold mb-6 text-center">Registration Form</h1>
+            
+            <!-- Name -->
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium mb-2">Name:</label>
+                <input type="text" name="name" id="name" 
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       placeholder="Enter your name" required>
+            </div>
+    
+            <!-- Room Type -->
+            <div class="mb-4">
+                <label for="room" class="block text-sm font-medium mb-2">Room Type:</label>
+                <select name="room" id="room" 
+                        class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Non - AC">Non - AC</option>
+                    <option value="AC">Normal AC</option>
+                    <option value="Deluxe">AC - Suite</option>
+                </select>
+            </div>
+    
+            <!-- Number of Guests -->
+            <div class="mb-4">
+                <label for="guests" class="block text-sm font-medium mb-2">Number of Guests:</label>
+                <input type="number" name="guests" id="guests" 
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                       placeholder="Enter number of guests" required>
+            </div>
+    
+            <!-- Check-in Date and Time -->
+            <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="checkindate" class="block text-sm font-medium mb-2">Check-in Date:</label>
+                    <input type="date" name="checkindate" id="checkindate" 
+                           class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div>
+                    <label for="checkintime" class="block text-sm font-medium mb-2">Check-in Time:</label>
+                    <input type="time" name="checkintime" id="checkintime" 
+                           class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+            </div>
+    
+            <!-- Check-out Date and Time -->
+            <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="checkoutdate" class="block text-sm font-medium mb-2">Check-out Date:</label>
+                    <input type="date" name="checkoutdate" id="checkoutdate" 
+                           class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div>
+                    <label for="checkouttime" class="block text-sm font-medium mb-2">Check-out Time:</label>
+                    <input type="time" name="checkouttime" id="checkouttime" 
+                           class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+            </div>
+    
+            <!-- Free Pickup -->
+            <div class="mb-4">
+                <label for="pickup" class="block text-sm font-medium mb-2">Free Pick Up?</label>
+                <div class="flex gap-4">
+                    <button type="button" 
+                            class="px-4 py-2 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600">
+                        Yes, I need Pickup
+                    </button>
+                    <button type="button" 
+                            class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md shadow hover:bg-gray-400">
+                        No, I don't need Pickup
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Special Requests -->
+            <div class="mb-6">
+                <label for="specialRequests" class="block text-sm font-medium mb-2">Special Requests:</label>
+                <textarea name="specialRequests" id="specialRequests" rows="4" 
+                          class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                          placeholder="Enter any special requests"></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" 
+                        class="px-6 py-3 bg-blue-500 text-white font-medium rounded-md shadow hover:bg-blue-600">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <footer class="bg-gray-800 text-white py-10 px-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- Hotel Name -->
+        <p class="text-center text-lg font-bold mb-4">Hotel StayFord</p>
+
+        <!-- Location Section -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Our Location</h2>
+            <p>4 The Green, Meriden, Solihull, England.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+            <p>Phone: <span class="font-medium">0121 123 4567</span></p>
+            <p>Tel: <span class="font-medium">(4444) 343 3353</span></p>
+            <p>
+                Email: 
+                <a href="mailto:contact@stayford.com" class="text-blue-400 underline hover:text-blue-500">
+                    contact@stayford.com
+                </a>
+            </p>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-2">Find Us on the Map</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.151581705021!2d-0.15889522348857701!3d51.64399627184475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876184dab254687%3A0x6fe69cb6e9aa80fe!2sStayford%2C%20Ridgeway%20Ave%2C%20London%2C%20Barnet%20EN4%208TW%2C%20UK!5e1!3m2!1sen!2sin!4v1737795676842!5m2!1sen!2sin" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg"
+                >
+            </iframe>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center border-t border-gray-700 pt-4">
+            <p class="text-sm">&copy; 2025 Hotel StayFord. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
